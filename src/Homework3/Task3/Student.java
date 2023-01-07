@@ -1,5 +1,7 @@
 package Homework3.Task3;
 
+import java.util.Arrays;
+
 public class Student {
 
    private String firstName;
@@ -7,6 +9,17 @@ public class Student {
    private int group;
    private Course[] coursesTaken;
    private int age;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", group=" + group +
+                ", coursesTaken=" + Arrays.toString(coursesTaken) +
+                ", age=" + age +
+                '}';
+    }
 
     public Student(String lastName, Course[] coursesTaken) {
         this.lastName = lastName;

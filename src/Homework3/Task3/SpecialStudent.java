@@ -4,6 +4,14 @@ public class SpecialStudent extends CollegeStudent {
    private long secretKey;
    private String email;
 
+    @Override
+    public String toString() {
+        return "SpecialStudent{" +
+                "secretKey=" + secretKey +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
     public SpecialStudent(String lastName, Course[] coursesTaken) {
         super(lastName, coursesTaken);
     }

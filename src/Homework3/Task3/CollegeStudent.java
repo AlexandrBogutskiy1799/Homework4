@@ -5,6 +5,15 @@ public class CollegeStudent extends Student {
    private int rating;
    private long id;
 
+    @Override
+    public String toString() {
+        return "CollegeStudent{" +
+                "collegeName='" + collegeName + '\'' +
+                ", rating=" + rating +
+                ", id=" + id +
+                '}';
+    }
+
     public CollegeStudent(String firstName, String lastName, int group, String collegeName, int rating, long id) {
         super(firstName, lastName, group);
         this.collegeName = collegeName;

@@ -23,6 +23,16 @@ public class Course {
     private int hoursDuration;
     private String teacherName;
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "startDate=" + startDate +
+                ", name='" + name + '\'' +
+                ", hoursDuration=" + hoursDuration +
+                ", teacherName='" + teacherName + '\'' +
+                '}';
+    }
+
     public Course(String name, int hoursDuration, String teacherName) {
         this.name = name;
         this.hoursDuration = hoursDuration;
@@ -39,7 +49,10 @@ public class Course {
     }
 
     public void setStartDate(Date startDate) {
-        this.startDate = startDate;
+        if(startDate == null){
+            this.startDate = new Date();
+        }else this.startDate = startDate;
+
     }
 
     public String getName() {
@@ -48,6 +61,7 @@ public class Course {
 
     public void setName(String name) {
         this.name = name;
+
     }
 
     public int getHoursDuration() {
