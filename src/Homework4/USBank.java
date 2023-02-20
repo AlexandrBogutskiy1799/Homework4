@@ -2,27 +2,58 @@ package Homework4;
 
 public class USBank extends Bank {
 
-    public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee,
+                  long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
     @Override
     int getLimitOfWithdrawal() {
+        switch (getCurrency()) {
+            case USD:
+                return 1000;
+            case EUR:
+                return 1200;
+        }
         return 0;
     }
 
     @Override
     int getLimitOfFunding() {
+        switch (getCurrency()) {
+            case USD:
+                return 0;
+            case EUR:
+                return 10000;
+        }
         return 0;
     }
 
     @Override
     int getMonthlyRate() {
+        switch (getCurrency()) {
+            case USD:
+                return 1;
+            case EUR:
+                return 2;
+        }
         return 0;
     }
 
     @Override
-    int getCommission(int summ) {
+    int getCommission(int sum) {
+        if ((sum <= 1000) && (getCurrency().equals(Currency.USD))) {
+            return 5;
+        } else if ((sum > 1000) && (getCurrency().equals(Currency.USD))) {
+            return 7;
+        }
+        if ((sum <= 1000) && (getCurrency().equals(Currency.EUR))) {
+            return 6;
+        } else if ((sum > 1000) && (getCurrency().equals(Currency.EUR))) {
+            return 8;
+        }
+
+
         return 0;
     }
 

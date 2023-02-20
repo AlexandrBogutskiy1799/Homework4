@@ -2,13 +2,13 @@ package Homework4;
 
 /**
  * You need to following structure: abstarct class Bank and three classes that extends it: USBank, EUBank, ChinaBank. Enum Currency. Class User that represents User of our Bank System. Interface BankSystem and its implementation BankSystemImpl.
- *
+ * <p>
  * Finally create Main class with main method, where you should create 6 Users: 2 of USBank, 2 of EUBank and 2 of ChinaBank. Run four different operations with erery User’s baalance and print its objects to console.
- *
+ * <p>
  * TASK 1
- *
+ * <p>
  * Abstract class Bank should contain fields
- *
+ * <p>
  * long id
  * String bankCountry
  * Currency currency
@@ -16,12 +16,12 @@ package Homework4;
  * double avrSalaryOfEmployee
  * long rating
  * long totalCapital
- *
- *
+ * <p>
+ * <p>
  * Generate getters and setters. And create constructor with all fields.
- *
+ * <p>
  * Methods are:
- *
+ * <p>
  * abstract int getLimitOfWithdrawal()
  * abstract int getLimitOfFunding()
  * abstract int getMonthlyRate()
@@ -30,13 +30,13 @@ package Homework4;
  */
 public abstract class Bank {
 
-long id;
-String bankCountry;
-Currency currency;
-int numberOfEmployees;
-double avrSalaryOfEmployee;
-long rating;
-long totalCapital;
+    private long id;
+    private String bankCountry;
+    private Currency currency;
+    private int numberOfEmployees;
+    private double avrSalaryOfEmployee;
+    private long rating;
+    private long totalCapital;
 
     public long getId() {
         return id;
@@ -94,7 +94,8 @@ long totalCapital;
         this.totalCapital = totalCapital;
     }
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee,
+                long rating, long totalCapital) {
         this.id = id;
         this.bankCountry = bankCountry;
         this.currency = currency;
@@ -103,12 +104,18 @@ long totalCapital;
         this.rating = rating;
         this.totalCapital = totalCapital;
     }
+
     abstract int getLimitOfWithdrawal();
+
     abstract int getLimitOfFunding();
+
     abstract int getMonthlyRate();
-    abstract int getCommission(int summ);
-    double moneyPaidMonthlyForSalary(){
-        return moneyPaidMonthlyForSalary();
-    };
+
+    abstract int getCommission(int sum);
+
+    double moneyPaidMonthlyForSalary() {
+        return 0;
+    }
+
 
 }
