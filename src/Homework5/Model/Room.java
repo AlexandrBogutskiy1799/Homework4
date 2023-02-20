@@ -1,4 +1,4 @@
-package Homework5;
+package Homework5.Model;
 
 import java.util.Date;
 import java.util.Objects;

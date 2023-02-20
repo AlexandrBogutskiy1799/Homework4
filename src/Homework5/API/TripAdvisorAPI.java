@@ -1,6 +1,8 @@
-package Homework5;
+package Homework5.API;
 
-public class GoogleAPI implements API{
+import Homework5.Model.Room;
+
+public class TripAdvisorAPI implements API {
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
         return new Room[0];

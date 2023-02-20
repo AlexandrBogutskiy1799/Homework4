@@ -1,4 +1,4 @@
-package Homework5;
+package Homework5.Model;
 
 public interface DAO {
     Room save(Room room);

@@ -1,6 +1,6 @@
-package Homework5;
+package Homework5.Model;
 
-public class DAOImpl implements DAO{
+public class DAOImpl implements DAO {
     @Override
     public Room save(Room room) {
         return null;
